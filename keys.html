@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>License Keys - License Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/universe-ui@latest/dist/universe.min.css">
+    <style>
+        body {
+            background: #eef2f7;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .uu-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        #keysList, #appsList {
+            min-height: 48px;
+        }
+        .uu-card {
+            border-radius: 12px;
+            border: 1px solid #d1d5db;
+            background: #f9fafb;
+            padding: 20px;
+        }
+        .uu-btn-primary {
+            background: linear-gradient(90deg, #2563eb 60%, #1e40af 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .uu-btn-primary:hover {
+            background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+        }
+        .uu-btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .uu-btn-secondary:hover {
+            background: #e5e7eb;
+        }
+        .uu-mb-3 {
+            margin-bottom: 1.2rem;
+        }
+        .uu-mt-2 {
+            margin-top: 0.7rem;
+        }
+        .uu-mt-3 {
+            margin-top: 1.2rem;
+        }
+        .uu-mt-4 {
+            margin-top: 2.2rem;
+        }
+        .uu-mt-5 {
+            margin-top: 3.2rem;
+        }
+        .uu-mb-4 {
+            margin-bottom: 2.2rem;
+        }
+        .uu-shadow {
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .uu-flex {
+            display: flex;
+        }
+        .uu-items-center {
+            align-items: center;
+        }
+        .uu-text-primary {
+            color: #1d4ed8;
+        }
+        .uu-text-secondary {
+            color: #6b7280;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 1.2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="uu-container uu-mt-4 uu-mb-4">
+        <h2 class="uu-text-primary">Available License Keys</h2>
+        <div id="keysList" class="uu-card uu-shadow uu-p-3 uu-mb-4"></div>
+        <h3 class="uu-mt-5 uu-text-secondary">Download Applications</h3>
+        <div id="appsList" class="uu-card uu-shadow uu-p-3 uu-mb-4"></div>
+    </div>
+    <script>
+    // Applications data without logos
+    const apps = [
+        { name: "Windows 10 ISO", desc: "Official Windows 10 installation image", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Office 2021", desc: "Microsoft Office 2021 installer", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "ESET Antivirus", desc: "ESET Antivirus setup", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Adobe Photoshop", desc: "Photo editing software", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Adobe Premiere Pro", desc: "Video editing software", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Adobe After Effects", desc: "Motion graphics & VFX", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Adobe Audition", desc: "Audio editing & mixing", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "DaVinci Resolve", desc: "Professional video editing", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Sony Vegas Pro", desc: "Video editing software", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "FL Studio", desc: "Music production & beat making", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Ableton Live", desc: "Live performance & music creation", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Virtual DJ", desc: "DJ mixing software", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Audacity", desc: "Free audio editor & recorder", insta: "amen.allah.ben.ibrahim.7" },
+        { name: "Serum", desc: "Wavetable synthesizer", insta: "amen.allah.ben.ibrahim.7" }
+    ];
+
+    function renderApps() {
+        const container = document.getElementById('appsList');
+        container.innerHTML = '';
+        apps.forEach((app, idx) => {
+            const div = document.createElement('div');
+            div.className = "uu-mb-3 uu-flex uu-items-center";
+            div.innerHTML = `
+                <div style="flex:1">
+                  <strong>${app.name}</strong><br>
+                  <span>${app.desc}</span><br>
+                  <a href="https://www.instagram.com/${app.insta}/" target="_blank" class="uu-btn uu-btn-primary uu-mt-2">
+                      Get Download Link via Instagram
+                  </a>
+                </div>
+            `;
+            container.appendChild(div);
+            if (idx < apps.length - 1) {
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+            }
+        });
+    }
+    renderApps();
+    </script>
+    <script src="keys.js"></script>
+
+    <div class="uu-container uu-mt-4">
+        <h2>Clés d'achat de logiciels</h2>
+        <div class="uu-card">
+            <h3>Applications disponibles</h3>
+            <div id="appsListFr">
+                <div>
+                    <strong>Microsoft Office 2021</strong><br>
+                    <span>Clé d'activation à vie pour PC</span><br>
+                    <button class="uu-btn-primary" onclick="window.location='https://www.instagram.com/amen.allah.ben.ibrahim.7'">Acheter</button>
+                </div>
+                <hr>
+                <div>
+                    <strong>Windows 11 Pro</strong><br>
+                    <span>Licence officielle pour 1 appareil</span><br>
+                    <button class="uu-btn-primary" onclick="window.location='https://www.instagram.com/amen.allah.ben.ibrahim.7'">Acheter</button>
+                </div>
+                <hr>
+                <div>
+                    <strong>Adobe Creative Cloud</strong><br>
+                    <span>Abonnement 1 an - Toutes applications</span><br>
+                    <button class="uu-btn-primary" onclick="window.location='https://www.instagram.com/amen.allah.ben.ibrahim.7'">Acheter</button>
+                </div>
+            </div>
+        </div>
+        <div class="uu-mt-3">
+            <a href="dashboard.html" class="uu-btn uu-btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+<script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDTg-3HwQZCLHr2roQvbKaVAvkraOwO9FQ",
+  authDomain: "aazz-11d76.firebaseapp.com",
+  projectId: "aazz-11d76",
+  storageBucket: "aazz-11d76.firebasestorage.app",
+  messagingSenderId: "1036591886987",
+  appId: "1:1036591886987:web:d51e1e8577d71df4f99a8e",
+  measurementId: "G-QD2VYK8X9Z"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+</html>

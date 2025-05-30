@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - License Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 40px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        nav a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+        #logoutBtn {
+            color: #e74c3c;
+        }
+        #logoutBtn:hover {
+            color: #c0392b;
+        }
+        .site-description {
+            max-width: 700px;
+            margin: 30px auto 20px auto;
+            background: #fff;
+            padding: 24px 32px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            color: #34495e;
+        }
+        .features-list {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            background: #fff;
+            padding: 20px 32px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+        }
+        .features-list h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .features-list ul {
+            padding-left: 20px;
+        }
+        .features-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, <span id="userDisplay"></span></h2>
+    <div class="site-description">
+        <h3>À propos de notre site</h3>
+        <p>
+            Notre portail de licences vous permet d'acheter, de gérer et de suivre facilement vos clés de licence pour divers logiciels. Profitez d'une expérience simple, rapide et sécurisée pour toutes vos transactions de licences numériques.
+        </p>
+    </div>
+    <div class="features-list">
+        <h3>Nos services</h3>
+        <ul>
+            <li><strong>Vente de clés logicielles :</strong> Accédez à une large gamme de licences pour différents logiciels.</li>
+            <li><strong>Gestion de vos achats :</strong> Consultez et gérez toutes vos clés achetées depuis votre espace personnel.</li>
+            <li><strong>Support client :</strong> Bénéficiez d'une assistance rapide en cas de problème avec vos licences.</li>
+            <li><strong>Transactions sécurisées :</strong> Toutes vos opérations sont protégées et confidentielles.</li>
+            <li><strong>Notifications :</strong> Recevez des alertes pour les mises à jour ou l’expiration de vos licences.</li>
+        </ul>
+    </div>
+    <nav>
+        <a href="keys.html">Browse Keys</a> |
+        <a href="mykeys.html">My Keys And App</a> |
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+    <script src="dashboard.js"></script>
+</body>
+<script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDTg-3HwQZCLHr2roQvbKaVAvkraOwO9FQ",
+  authDomain: "aazz-11d76.firebaseapp.com",
+  projectId: "aazz-11d76",
+  storageBucket: "aazz-11d76.firebasestorage.app",
+  messagingSenderId: "1036591886987",
+  appId: "1:1036591886987:web:d51e1e8577d71df4f99a8e",
+  measurementId: "G-QD2VYK8X9Z"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+</html>

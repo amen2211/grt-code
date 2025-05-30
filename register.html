@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - License Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/universe-ui@latest/dist/universe.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at 60% 40%, #a7f3d0 0%, #f3e8ff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .uu-card {
+      max-width: 370px;
+      margin: 32px auto;
+      padding: 36px 28px 28px 28px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 6px 32px 0 rgba(80, 80, 160, 0.13);
+      border: 1px solid #e0e7ff;
+      transition: box-shadow 0.2s;
+    }
+    .uu-card:hover {
+      box-shadow: 0 12px 40px 0 rgba(80, 80, 160, 0.18);
+    }
+    h2 {
+      margin-bottom: 28px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #7c3aed;
+      font-size: 2rem;
+      text-shadow: 0 2px 8px #f3e8ff;
+    }
+    .uu-form .uu-input {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      transition: border 0.2s;
+    }
+    .uu-form .uu-input:focus {
+      border: 1.5px solid #7c3aed;
+      background: #fff;
+      outline: none;
+    }
+    .uu-btn-primary {
+      width: 100%;
+      padding: 13px;
+      font-size: 1.05rem;
+      border-radius: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #7c3aed 60%, #06b6d4 100%);
+      border: none;
+      color: #fff;
+      box-shadow: 0 2px 8px #e0e7ff;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .uu-btn-primary:hover {
+      background: linear-gradient(90deg, #06b6d4 0%, #7c3aed 100%);
+      box-shadow: 0 4px 16px #c7d2fe;
+    }
+    p {
+      text-align: center;
+      margin-top: 18px;
+      color: #6b7280;
+      font-size: 1rem;
+    }
+    a {
+      color: #06b6d4;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #7c3aed;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="uu-text-primary">Register</h2>
+  <form id="registerForm" class="uu-form uu-card uu-shadow">
+    <input type="text" id="registerUsername" placeholder="Username" required class="uu-input">
+    <input type="password" id="registerPassword" placeholder="Password" required class="uu-input">
+    <button type="submit" class="uu-btn uu-btn-primary">Register</button>
+  </form>
+  <p>Already have an account? <a href="index.html">Login here</a></p>
+  <script src="register.js"></script>
+</body>
+<script>
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDTg-3HwQZCLHr2roQvbKaVAvkraOwO9FQ",
+  authDomain: "aazz-11d76.firebaseapp.com",
+  projectId: "aazz-11d76",
+  storageBucket: "aazz-11d76.firebasestorage.app",
+  messagingSenderId: "1036591886987",
+  appId: "1:1036591886987:web:d51e1e8577d71df4f99a8e",
+  measurementId: "G-QD2VYK8X9Z"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+</html>
